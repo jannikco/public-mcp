@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0",
+  "product": "heymyapps",
+  "credential": "HEYMYAPPS_API_KEY",
+  "credentialAliases": [
+    "PIPMCP_API_KEY"
+  ],
+  "skills": [
+    {
+      "name": "heymyapps-public",
+      "description": "Connect AI agents to Public using one HeyMyApps API key and actual hosted tool discovery."
+    }
+  ],
+  "files": {
+    "skills/heymyapps-public/SKILL.md": "1048db906700d5d28dea9c4222c2f5ad58c4433c46db47e038c69c8aa24e9c1e"
+  }
+}

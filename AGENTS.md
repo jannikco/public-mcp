@@ -1,0 +1,3 @@
+# Public MCP setup and connection checker
+
+Start with capabilities.json and `.agents/skills/heymyapps-public/SKILL.md`. This package uses the private HeyMyApps gateway. Live discovery/execution requires `HEYMYAPPS_API_KEY` (or the `PIPMCP_API_KEY` alias); no provider runtime or credential mapper is bundled. Public API secrets are configured only in HeyMyApps. Actual hosted schemas, selected connections and permissions are authoritative. Run `npm test`; default `npm start` is offline. Never claim fixture tests prove live provider access.

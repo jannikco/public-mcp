@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+import{PipMCPGatewayClient,gatewayEnv}from'./lib/index.mjs';
+import{pathToFileURL}from'node:url';
+export async function discover({env=process.env,fetchImpl}={}){const connectorId=gatewayEnv('CONNECTOR_ID',env)??"public";if(connectorId==='custom-api'&&!gatewayEnv('INTEGRATION_ID',env))throw new Error('Set HEYMYAPPS_INTEGRATION_ID (or PIPMCP_INTEGRATION_ID) to your reviewed, published custom API. Draft imports have no callable tool inventory.');const client=new PipMCPGatewayClient({apiKey:gatewayEnv('API_KEY',env),...(fetchImpl?{fetchImpl}:{})});return client.getTools(connectorId,{integrationId:gatewayEnv('INTEGRATION_ID',env),connectionId:gatewayEnv('CONNECTION_ID',env)});}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)try{console.log(JSON.stringify(await discover(),null,2));}catch(error){console.error(JSON.stringify({ok:false,error:{code:error.code??'setup_required',message:error.message}}));process.exitCode=1;}

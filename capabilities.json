@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "public-mcp",
+  "version": "1.0.0",
+  "product": "heymyapps",
+  "artifactType": "Setup",
+  "credential": "HEYMYAPPS_API_KEY",
+  "credentialAliases": [
+    "PIPMCP_API_KEY"
+  ],
+  "connectorId": "public",
+  "executionAuthority": "https://heymyapps.com/api/v1",
+  "inventory": "authenticated-dynamic",
+  "verification": {
+    "transport": "Tested",
+    "providerExecution": "Documented"
+  },
+  "skills": [
+    "heymyapps-public"
+  ],
+  "offlineMode": "plan-and-fixtures-only",
+  "historicalVersions": "Older MIT local runtimes remain in Git history"
+}

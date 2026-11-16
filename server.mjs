@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+import{PipMCPGatewayClient,gatewayEnv,startBridge}from'./lib/index.mjs';
+try{new PipMCPGatewayClient();const connectorId=gatewayEnv('CONNECTOR_ID')??"public";if(connectorId==='custom-api'&&!gatewayEnv('INTEGRATION_ID'))throw new Error('Set HEYMYAPPS_INTEGRATION_ID (or PIPMCP_INTEGRATION_ID) to the reviewed, published private API integration.');startBridge({connectorId,integrationId:gatewayEnv('INTEGRATION_ID'),connectionId:gatewayEnv('CONNECTION_ID')});}catch(error){console.error(JSON.stringify({ok:false,error:{code:error.code??'setup_required',message:error.message}}));process.exitCode=1;}

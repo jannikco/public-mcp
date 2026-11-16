@@ -1,0 +1,38 @@
+{
+  "name": "public-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Prepare Public for AI workflows with a HeyMyApps setup doctor, authenticated discovery and coding-agent instructions.",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.mjs"
+    }
+  },
+  "bin": {
+    "public-mcp": "example.mjs"
+  },
+  "scripts": {
+    "start": "node example.mjs",
+    "doctor": "node doctor.mjs",
+    "server": "node server.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.4.0"
+  },
+  "files": [
+    "lib",
+    "server.mjs",
+    "doctor.mjs",
+    "example.mjs",
+    "README.md",
+    "LICENSE",
+    "capabilities.json",
+    "docs"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "id": "public-mcp",
+  "kind": "mcp-setup",
+  "product": "heymyapps",
+  "title": "Public MCP setup and connection checker",
+  "description": "Prepare Public for AI workflows with a HeyMyApps setup doctor, authenticated discovery and coding-agent instructions.",
+  "status": "ready",
+  "verification": "mock-only",
+  "releaseEligible": false,
+  "operationIds": [
+    "get_accounts",
+    "get_account_portfolio_v2",
+    "get_history",
+    "get_unrealized_tax_lots",
+    "get_unrealized_tax_lots_csv",
+    "get_unrealized_tax_lots_for_symbol",
+    "get_all_instruments",
+    "get_instrument",
+    "search_bonds",
+    "get_bond_details",
+    "get_quotes",
+    "get_option_expirations",
+    "get_option_chain",
+    "get_option_greeks",
+    "get_strategy_quote",
+    "get_bars_v2",
+    "get_bars_v2_with_aggregation",
+    "get_event_details",
+    "get_event_summary",
+    "get_event_categories",
+    "get_event_contract_bars",
+    "get_order",
+    "search_orders",
+    "preflight_single_leg",
+    "preflight_multi_leg",
+    "place_order",
+    "place_multileg_order",
+    "replace_order",
+    "cancel_order"
+  ],
+  "maintainer": "jannikco",
+  "license": "MIT",
+  "attributionSlug": "github-public-mcp",
+  "sourceRevision": "3bdc5624454cd44e2becd3a024aa58609a7e54e66c4fefb947428d18b4a66518",
+  "qualityVersion": 2,
+  "artifactType": "setup",
+  "evidence": [
+    "Gateway HTTP transport fixtures",
+    "Generated stdio wrapper discovery/call fixtures"
+  ],
+  "provenance": [
+    "https://github.com/PublicDotCom/public-openapi/blob/main/spec.yaml"
+  ],
+  "utility": {
+    "problem": "Prepare Public and inspect your hosted setup",
+    "output": "Offline setup plan and authenticated discovery diagnostics"
+  },
+  "appSlug": "public",
+  "appName": "Public",
+  "maintenanceOnly": true,
+  "executionAuthority": "heymyapps-gateway",
+  "version": "1.0.0",
+  "agentReady": true,
+  "capabilityEvidence": {
+    "local": {
+      "level": "Tested",
+      "operations": [
+        {
+          "name": "gateway_transport",
+          "level": "Tested",
+          "method": "contract-fixture",
+          "evidenceRefs": [
+            "Generated gateway/stdio fixtures"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "Generated gateway/stdio fixtures"
+      ],
+      "mode": "local"
+    },
+    "managed": {
+      "level": "Documented",
+      "operations": [],
+      "evidenceRefs": [],
+      "mode": "managed"
+    }
+  },
+  "factory": "leadadapter-pipmcp",
+  "generatorVersion": 3
+}

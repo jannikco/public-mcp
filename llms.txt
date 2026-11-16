@@ -1,0 +1,8 @@
+# Public MCP setup and connection checker
+
+- [Quick start](README.md)
+- [Capabilities](capabilities.json)
+- [Agent instructions](AGENTS.md)
+- [Task skill](.agents/skills/heymyapps-public/SKILL.md)
+
+Actual operations require a scoped HeyMyApps API key (`HEYMYAPPS_API_KEY`; `PIPMCP_API_KEY` alias) and hosted configuration. Public API secrets belong in HeyMyApps only.
